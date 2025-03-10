@@ -1,0 +1,23 @@
+# -*- mode: ruby -*-
+# vi: set ft=ruby :
+
+Vagrant.configure("2") do |config|
+  config.vm.box = "generic/debian12"
+  config.vm.box_version = "4.3.12"
+  config.vm.hostname = "node-0"
+  config.vm.network "public_network", bridge: "enp2s0"
+  config.vm.network "private_network", ip: "10.200.2.2", virtualbox__intnet: true
+
+  config.vm.provider "virtualbox" do |vb|
+    vb.gui = true
+    vb.cpus = 1
+    vb.memory = "4096"
+  end
+
+  config.vm.disk :disk, size: "20GB", primary: true
+
+  # config.vm.provision "shell", inline: <<-SHELL
+  #   apt-get update
+  #   apt-get install -y apache2
+  # SHELL
+end
