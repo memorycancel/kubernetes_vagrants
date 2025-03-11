@@ -11,4 +11,6 @@
 | node-0  | Kubernetes worker node | 1   | 2GB   | 20GB    |
 | node-1  | Kubernetes worker node | 1   | 2GB   | 20GB    |
 
-可以与搭配使用： [kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way)。
+可以与[kubernetes-the-hard-way](https://github.com/kelseyhightower/kubernetes-the-hard-way)搭配使用。
+
+公共配置存档在 `common.rb` 文件中。
